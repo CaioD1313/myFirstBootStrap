@@ -94,7 +94,61 @@ $(document).ready(function(){
    //carrega todas as imagens da pagina primeiro para evitar bug no parallax:
    setTimeout(function(){
        $('#data-area').parallax({imageSrc: 'img/cidadeparallax.png'});
+       //$('#apply-area').parallax({imageSrc: 'img/pattern.png'});
+   },250); // 250 milisegundos
+
+
+   // Seção Trabalhe conosco
+   //carrega todas as imagens da pagina primeiro para evitar bug no parallax:
+   setTimeout(function(){
+    $('#apply-area').parallax({imageSrc: 'img/pattern.png'});
        
    },250); // 250 milisegundos
+
+   //Filtro do Portifólio:
+
+   $('.filter-btn').on('click',function(){
+
+        let type = $(this).attr('id'); // pega o id do botao clicado
+        let boxes = $('.project-box'); // pega todas as caixas que tem em projetos
+
+        
+        $('.main-btn').removeClass('active');
+        $(this).addClass('active');
+
+        // se clicou no botao de design:    
+        if(type == 'dsg-btn'){
+            eachBoxes('dsg',boxes);
+        }
+        else if(type == 'dev-btn')
+        {
+            eachBoxes('dev',boxes)
+        }
+        else if(type == 'seo-btn')
+        {
+            eachBoxes('seo',boxes)
+        }
+        else{
+            eachBoxes('all',boxes)
+        }
+    
+    });
+
+    function eachBoxes(type, boxes){
+        if(type == 'all'){
+            $(boxes).fadeIn();
+        }
+        else{
+            $(boxes).each(function(){
+
+                if(!$(this).hasClass(type)){
+                    $(this).fadeOut('slow');
+                }
+                else{
+                    $(this).fadeIn();
+                }
+            });
+        }
+    }
 
 }); 
