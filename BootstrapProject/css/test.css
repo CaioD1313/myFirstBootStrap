@@ -1,0 +1,12 @@
+/* Gerais: */
+@charset "utf-8";
+
+#div1{
+    background-color: blueviolet;
+    height: 200px;
+}
+
+#div2{
+    background-color: rgb(43, 226, 150);
+    height: 1500px;
+}

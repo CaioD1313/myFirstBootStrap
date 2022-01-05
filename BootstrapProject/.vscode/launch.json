@@ -3,19 +3,29 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
+    
+
     "configurations": [
+        
         {
-            "name": "Launch localhost",
+            "name": "Launch Chrome",
             "type": "chrome",
             "request": "launch",
-            "url": "C:\Users\DESENVOLVIMENTOVIII\Documents\Estudos Prog\Dez 2021\7. Bootstrap\myFirstBootStrap\BootstrapProject\index.html",
-            "webRoot": "${workspaceFolder}/wwwroot"
-        },
-        {
-            "name": "Launch index.html",
-            "type": "chrome",
-            "request": "launch",
-            "file": "${workspaceFolder}/index.html"
-        },
-    ]
+            "url": "file:///C:/Users/DESENVOLVIMENTOVIII/Documents/Estudos%20Prog/Dez%202021/7.%20Bootstrap/myFirstBootStrap/BootstrapProject/index.html",
+            "webRoot": "${workspaceFolder}/wwwroot",
+        }
+       
+        
+    ],
+
+    // "resolveSourceMapLocations": [
+    //     "${workspaceFolder}/**",
+    //     "!**/js/**"
+    // ],
+
+    // "scripts": [
+    //     "js/progressbar.min.js"
+    // ]
+
+  
 }
